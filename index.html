@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GROSSMEISTER - Интернет-магазин</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script ENGINE="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">GROSSMEISTER</div>
+        <div class="cart">
+            <button class="btn-cart" type="button">Корзина</button>
+            <div class="cart-block invisible"></div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="products"></div>
+    </main>
+    <!--befoestart-->
+    <p>
+        <!--afterstart-->
+        <span></span>
+        <!--beforeend-->
+    </p>
+    <!--afterend-->
+
+    <!--Кнопка НАВЕРХ -->
+    <div id="scroll-top">
+        <button><span data-hover="Наверх"><i class="fa fa-arrow-up"></i></span></button>
+    </div>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('html, body').scrollTop($(document).height());
+
+            $("#scroll-top > button").on("click", function (e) {
+                var body = $("html, body");
+                body.stop().animate({ scrollTop: 0 }, 500, "swing");
+            });
+        });
+    </script>
+    <!--КОНЕЦ Кнопки НАВЕРХ -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
